@@ -1,0 +1,464 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.alm.web</groupId>
+	<artifactId>EmployeeApplicationSprint4</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>Employee Management System</name>
+	<url>http://maven.apache.org</url>
+
+	<repositories>
+		<repository>
+			<id>spring.test-mvc</id>
+			<url>http://repo.springsource.org/libs-milestone</url>
+		</repository>
+			<repository>
+			<id>excilys</id>
+			<name>Excilys Repository</name>
+			<url>http://repository.excilys.com/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>excilys</id>
+			<name>Excilys Repository</name>
+			<url>http://repository.excilys.com/content/groups/public</url>
+		</pluginRepository>
+	</pluginRepositories>
+	
+	<dependencies>
+		<!-- Selenium -->
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-firefox-driver</artifactId>
+			<version>2.44.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>2.44.0</version>
+		</dependency>
+		<dependency>
+	<groupId>org.seleniumhq.selenium</groupId>
+	<artifactId>selenium-java</artifactId>
+	<version>2.44.0</version>
+</dependency>
+		
+
+		<!-- <dependency> <groupId>com.fasterxml.jackson.core</groupId> <artifactId>jackson-core</artifactId> 
+			<version>2.2.1</version> <scope>test</scope> </dependency> <dependency> <groupId>com.fasterxml.jackson.core</groupId> 
+			<artifactId>jackson-databind</artifactId> <version>2.2.1</version> <scope>test</scope> 
+			</dependency> <dependency> <groupId>org.hamcrest</groupId> <artifactId>hamcrest-all</artifactId> 
+			<version>1.3</version> <scope>test</scope> </dependency> -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.0.6.RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-test-mvc</artifactId> 
+			<version>1.0.0.M1</version> <scope>test</scope> </dependency> -->
+
+		<!-- This is for mocking the service -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.2.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.2.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- <dependency> <groupId>org.mockito</groupId> <artifactId>mockito-core</artifactId> 
+			<version>1.9.5</version> <scope>test</scope> </dependency> -->
+		<!-- Optional -->
+		<!-- <dependency> <groupId>org.hamcrest</groupId> <artifactId>hamcrest-core</artifactId> 
+			<version>1.3</version> <scope>test</scope> </dependency> <dependency> <groupId>org.hamcrest</groupId> 
+			<artifactId>hamcrest-library</artifactId> <version>1.3</version> <scope>test</scope> 
+			</dependency> -->
+
+
+		<!-- <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
+			<version>4.9</version> <scope>test</scope> <exclusions> <exclusion> <artifactId>hamcrest-core</artifactId> 
+			<groupId>org.hamcrest</groupId> </exclusion> </exclusions> </dependency> -->
+		<!-- <dependency> <groupId>org.mockito</groupId> <artifactId>mockito-core</artifactId> 
+			<version>1.9.5</version> <scope>test</scope> </dependency> <dependency> <groupId>org.springframework</groupId> 
+			<artifactId>spring-test</artifactId> <version>4.0.6.RELEASE</version> <scope>test</scope> 
+			</dependency> -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.9</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>hamcrest-core</artifactId>
+					<groupId>org.hamcrest</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>javax.servlet.jsp.jstl</groupId>
+			<artifactId>jstl-api</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.5</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.1.7.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.1.7.Final</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>javax</groupId> <artifactId>javaee-web-api</artifactId> 
+			<version>6.0</version> <scope>test</scope> </dependency> -->
+
+		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-annotations</artifactId> 
+			<version>3.5.6-Final</version> </dependency> -->
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.18</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>org.postgresql</groupId> <artifactId>postgresql</artifactId> 
+			<version>9.3-1100-jdbc41</version> </dependency> -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.0.6.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.0.6.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.0.6.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.0.6.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.0.6.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.0.6.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>aopalliance</groupId>
+			<artifactId>aopalliance</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+	        	<groupId>io.gatling.highcharts</groupId>
+	     		<artifactId>gatling-charts-highcharts</artifactId>
+			<version>2.0.0-M3a</version>
+     			<scope>test</scope>
+	     </dependency>
+		 
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>package</id>
+			<build>
+				<finalName>EmployeeApplication</finalName>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.1</version>
+						<configuration>
+							<jdk>1.7</jdk>
+							<source>1.7</source>
+							<target>1.7</target>
+						</configuration>
+					</plugin>
+
+					<!-- <plugin> <groupId>com.atlassian.maven.plugins</groupId> <artifactId>maven-clover2-plugin</artifactId> 
+						<version>3.1.12</version> <configuration> <encoding>utf-8</encoding> <license><![CDATA[PpOnrjlpFewlfppRpEgUBpPbqOQJCUXjxddDPtIMwGJDGG 
+						mi2KYwlOOX3WDaavVOPbBQRA2Ktgp87Kv<XxIdM4P76DSK QMRrXSqOOqMmOmnNoNrtxoMpPOnooOnRRpvvWUWVTVwsOn 
+						mnmUUnpttrorsmmmmmUUnpttrorsmmmmmUU3vYXdbUUn]]> </license> <targetPercentage>10%</targetPercentage> 
+						<jdk>1.7</jdk> <generatePdf>true</generatePdf> <generateXml>true</generateXml> 
+						<generateHtml>true</generateHtml> <generateHistorical>true</generateHistorical> 
+						</configuration> <executions> <execution> <id>main</id> <phase>verify</phase> 
+						<goals> <goal>instrument</goal> <goal>aggregate</goal> <goal>clover</goal> 
+						</goals> </execution> </executions> </plugin> -->
+
+					<!-- <plugin>
+						<groupId>org.apache.tomcat.maven</groupId>
+						<artifactId>tomcat7-maven-plugin</artifactId>
+						<version>2.1</version>
+						<configuration>
+							<server>myserver</server>
+							<url>http://172.27.59.96:8080/manager/text</url>
+							<username>admin</username>
+							<password>admin</password>
+							<path>/EMS_Hibernate1</path>
+						</configuration>
+
+						<executions>
+							<execution>
+								<id>start-tomcat</id>
+								<phase>pre-integration-test</phase>
+								<goals>
+
+									<goal>deploy</goal>
+								</goals>
+								<configuration>
+									<fork>true</fork>
+								</configuration>
+							</execution>
+							<execution>
+								<id>stop-tomcat</id>
+								<phase>post-integration-test</phase>
+								<goals>
+									<goal>shutdown</goal>
+								</goals>
+							</execution>
+
+
+						</executions>
+					</plugin> -->
+
+
+
+				</plugins>
+
+				<pluginManagement>
+				
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-war-plugin</artifactId>
+							<version>2.5</version>
+							<configuration>
+								<WebXml>src\main\webapp\WEB-INF\web.xml</WebXml>
+								<webResources>
+									<resource>
+										<!-- this is relative to the pom.xml directory -->
+										<directory>src\main\webapp\jsp</directory>
+										<!-- the list has a default value of ** -->
+										<includes>
+											<include>**/*.jsp</include>
+										</includes>
+									</resource>
+								</webResources>
+							</configuration>
+						</plugin>
+
+
+					<!-- 	<plugin>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>sonar-maven-plugin</artifactId>
+							<version>2.0</version>
+							<configuration>
+								<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+								<sonar.language>java</sonar.language>
+								<sonar.exclusions> **/test/* </sonar.exclusions>
+							</configuration>
+							<executions>
+								<execution>
+									<phase>verify</phase>
+									<goals>
+										<goal>sonar</goal>
+									</goals>
+								</execution>
+							</executions>
+						</plugin> -->
+
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>2.10</version>
+
+
+							<!-- <configuration> <excludes> <exclude>**/EmployeeControllerTest.java</exclude> 
+								<exclude>**/EmployeeAddControllerTest.java</exclude> </excludes> </configuration> -->
+							<configuration>
+								<!-- Skip the normal tests, we'll run them in the integration-test 
+									phase <skip>true</skip> -->
+
+
+								<excludes>
+									<exclude>**/EmployeeDeleteSeleniumTest.java</exclude>
+									<exclude>**/EmployeeAddSeleniumTest.java</exclude>
+									<exclude>**/EmployeeEditSeleniumTest.java</exclude>
+								</excludes>
+							</configuration>
+							<!-- <executions>
+								<execution>
+									<phase>integration-test</phase>
+									<goals>
+										<goal>test</goal>
+									</goals>
+									<configuration>
+										<excludes>
+											<exclude>**/EmployeeDeleteSeleniumTest.java</exclude>
+											<exclude>**/EmployeeControllerTest.java</exclude>
+											<exclude>**/com.sample.mvc.service/</exclude>
+											<exclude>**/com.sample.mvc.dao/</exclude>
+										</excludes>
+
+									</configuration>
+								</execution>
+							</executions> -->
+
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>gatling</id>
+			<build>
+				<plugins>
+			<plugin>
+			    <groupId>io.gatling</groupId>
+			    <artifactId>gatling-maven-plugin</artifactId>
+			    <version>2.0.0-M3a</version>
+			</plugin>
+			</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>selenium</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.10</version>
+						<executions>
+							<execution>
+								<phase>validate</phase>
+								<goals>
+									<goal>test</goal>
+								</goals>
+								<configuration>
+									<excludes>
+										<exclude>**/EmployeeDeleteSeleniumTest.java</exclude>
+										<exclude>**/EmployeeControllerTest.java</exclude>
+										<exclude>**/com.sample.mvc.service/</exclude>
+										<exclude>**/com.sample.mvc.dao/</exclude>
+									</excludes>
+
+								</configuration>
+							</execution>
+						</executions>
+
+					</plugin>
+					 <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>cobertura-maven-plugin</artifactId>
+            <version>2.5.2</version>
+        </plugin>
+				</plugins>
+
+
+			</build>
+		</profile>
+
+	</profiles>
+<reporting>
+
+    <plugins>
+ 
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>cobertura-maven-plugin</artifactId>
+            <version>2.5.2</version>
+            <configuration>
+                <check></check>
+                <formats>
+                    <format>html</format>
+                    <format>xml</format>
+                </formats>
+            </configuration>
+        </plugin>
+    
+    </plugins>
+  
+</reporting>
+</project>
