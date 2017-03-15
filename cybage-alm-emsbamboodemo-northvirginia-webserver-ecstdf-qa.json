@@ -1,0 +1,23 @@
+{
+     "family": "usap-ow-task-definition",
+     "containerDefinitions": [{
+         "name": "web",
+    "image": "543816070942.dkr.ecr.us-east-1.amazonaws.com/cybage-alm-emsbamboodemo-northverginia-ecscluster-qa:RELEASE_VERSION",
+    "cpu": 500,
+    "memory": null,
+    "portMappings": [
+      {
+        "containerPort": 8080
+      }
+    ],
+    "environment" : [
+        { "name" : "DRIVERCLASSNAME", "value" : "com.mysql.jdbc.Driver" },
+        { "name" : "DATABASEURL", "value" : "jdbc:mysql://cybage-alm-dev-rds.clbdj44v7c4x.us-east-1.rds.amazonaws.com:3306/app" },
+        { "name" : "DBUSERNAME", "value" : "app" },
+        { "name" : "DBPASSWORD", "value" : "app" },
+        { "name" : "DIALECT", "value" : "org.hibernate.dialect.MySQLDialect" }
+    ],
+    "essential": true,
+    "memoryReservation": 256
+     }]
+}
