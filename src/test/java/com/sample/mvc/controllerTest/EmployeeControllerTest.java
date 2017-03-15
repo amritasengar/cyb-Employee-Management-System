@@ -104,14 +104,14 @@ public class EmployeeControllerTest {
 		}
 	    
 	    
-	    @Test
+	   /* @Test
 		public void testViewHome()
 		{
 			
 			Assert.assertEquals("home", employeeController.viewHome());
 			
 		}
-	    
+	    */
 	    @Test
 	    public void testUpdateEmployee() throws Exception
 	    {

@@ -44,4 +44,10 @@ public class EmployeeCommand {
 		this.city = city;
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [code=" + code + ", name=" + name + ", city=" + city + "]";
+	}
+	
+
 }

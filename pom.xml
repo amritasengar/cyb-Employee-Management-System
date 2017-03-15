@@ -13,7 +13,7 @@
 			<id>spring.test-mvc</id>
 			<url>http://repo.springsource.org/libs-milestone</url>
 		</repository>
-			<repository>
+		<repository>
 			<id>excilys</id>
 			<name>Excilys Repository</name>
 			<url>http://repository.excilys.com/content/groups/public</url>
@@ -27,7 +27,7 @@
 			<url>http://repository.excilys.com/content/groups/public</url>
 		</pluginRepository>
 	</pluginRepositories>
-	
+
 	<dependencies>
 		<!-- Selenium -->
 
@@ -43,11 +43,11 @@
 			<version>2.44.0</version>
 		</dependency>
 		<dependency>
-	<groupId>org.seleniumhq.selenium</groupId>
-	<artifactId>selenium-java</artifactId>
-	<version>2.44.0</version>
-</dependency>
-		
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.44.0</version>
+		</dependency>
+
 
 		<!-- <dependency> <groupId>com.fasterxml.jackson.core</groupId> <artifactId>jackson-core</artifactId> 
 			<version>2.2.1</version> <scope>test</scope> </dependency> <dependency> <groupId>com.fasterxml.jackson.core</groupId> 
@@ -228,14 +228,22 @@
 			<version>3.0.1</version>
 			<optional>true</optional>
 		</dependency>
-		
+
 		<dependency>
-	        	<groupId>io.gatling.highcharts</groupId>
-	     		<artifactId>gatling-charts-highcharts</artifactId>
+			<groupId>io.gatling.highcharts</groupId>
+			<artifactId>gatling-charts-highcharts</artifactId>
 			<version>2.0.0-M3a</version>
-     			<scope>test</scope>
-	     </dependency>
-		 
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+
+
 	</dependencies>
 	<profiles>
 		<profile>
@@ -264,48 +272,20 @@
 						<goals> <goal>instrument</goal> <goal>aggregate</goal> <goal>clover</goal> 
 						</goals> </execution> </executions> </plugin> -->
 
-					<!-- <plugin>
-						<groupId>org.apache.tomcat.maven</groupId>
-						<artifactId>tomcat7-maven-plugin</artifactId>
-						<version>2.1</version>
-						<configuration>
-							<server>myserver</server>
-							<url>http://172.27.59.96:8080/manager/text</url>
-							<username>admin</username>
-							<password>admin</password>
-							<path>/EMS_Hibernate1</path>
-						</configuration>
-
-						<executions>
-							<execution>
-								<id>start-tomcat</id>
-								<phase>pre-integration-test</phase>
-								<goals>
-
-									<goal>deploy</goal>
-								</goals>
-								<configuration>
-									<fork>true</fork>
-								</configuration>
-							</execution>
-							<execution>
-								<id>stop-tomcat</id>
-								<phase>post-integration-test</phase>
-								<goals>
-									<goal>shutdown</goal>
-								</goals>
-							</execution>
-
-
-						</executions>
-					</plugin> -->
+					<!-- <plugin> <groupId>org.apache.tomcat.maven</groupId> <artifactId>tomcat7-maven-plugin</artifactId> 
+						<version>2.1</version> <configuration> <server>myserver</server> <url>http://172.27.59.96:8080/manager/text</url> 
+						<username>admin</username> <password>admin</password> <path>/EMS_Hibernate1</path> 
+						</configuration> <executions> <execution> <id>start-tomcat</id> <phase>pre-integration-test</phase> 
+						<goals> <goal>deploy</goal> </goals> <configuration> <fork>true</fork> </configuration> 
+						</execution> <execution> <id>stop-tomcat</id> <phase>post-integration-test</phase> 
+						<goals> <goal>shutdown</goal> </goals> </execution> </executions> </plugin> -->
 
 
 
 				</plugins>
 
 				<pluginManagement>
-				
+
 					<plugins>
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
@@ -327,24 +307,11 @@
 						</plugin>
 
 
-					<!-- 	<plugin>
-							<groupId>org.codehaus.mojo</groupId>
-							<artifactId>sonar-maven-plugin</artifactId>
-							<version>2.0</version>
-							<configuration>
-								<sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-								<sonar.language>java</sonar.language>
-								<sonar.exclusions> **/test/* </sonar.exclusions>
-							</configuration>
-							<executions>
-								<execution>
-									<phase>verify</phase>
-									<goals>
-										<goal>sonar</goal>
-									</goals>
-								</execution>
-							</executions>
-						</plugin> -->
+						<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>sonar-maven-plugin</artifactId> 
+							<version>2.0</version> <configuration> <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin> 
+							<sonar.language>java</sonar.language> <sonar.exclusions> **/test/* </sonar.exclusions> 
+							</configuration> <executions> <execution> <phase>verify</phase> <goals> <goal>sonar</goal> 
+							</goals> </execution> </executions> </plugin> -->
 
 						<plugin>
 							<groupId>org.apache.maven.plugins</groupId>
@@ -365,43 +332,31 @@
 									<exclude>**/EmployeeEditSeleniumTest.java</exclude>
 								</excludes>
 							</configuration>
-							<!-- <executions>
-								<execution>
-									<phase>integration-test</phase>
-									<goals>
-										<goal>test</goal>
-									</goals>
-									<configuration>
-										<excludes>
-											<exclude>**/EmployeeDeleteSeleniumTest.java</exclude>
-											<exclude>**/EmployeeControllerTest.java</exclude>
-											<exclude>**/com.sample.mvc.service/</exclude>
-											<exclude>**/com.sample.mvc.dao/</exclude>
-										</excludes>
-
-									</configuration>
-								</execution>
-							</executions> -->
+							<!-- <executions> <execution> <phase>integration-test</phase> <goals> 
+								<goal>test</goal> </goals> <configuration> <excludes> <exclude>**/EmployeeDeleteSeleniumTest.java</exclude> 
+								<exclude>**/EmployeeControllerTest.java</exclude> <exclude>**/com.sample.mvc.service/</exclude> 
+								<exclude>**/com.sample.mvc.dao/</exclude> </excludes> </configuration> </execution> 
+								</executions> -->
 
 						</plugin>
 					</plugins>
 				</pluginManagement>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>gatling</id>
 			<build>
 				<plugins>
-			<plugin>
-			    <groupId>io.gatling</groupId>
-			    <artifactId>gatling-maven-plugin</artifactId>
-			    <version>2.0.0-M3a</version>
-			</plugin>
-			</plugins>
+					<plugin>
+						<groupId>io.gatling</groupId>
+						<artifactId>gatling-maven-plugin</artifactId>
+						<version>2.0.0-M3a</version>
+					</plugin>
+				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>selenium</id>
 			<build>
@@ -429,11 +384,11 @@
 						</executions>
 
 					</plugin>
-					 <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>cobertura-maven-plugin</artifactId>
-            <version>2.5.2</version>
-        </plugin>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>cobertura-maven-plugin</artifactId>
+						<version>2.5.2</version>
+					</plugin>
 				</plugins>
 
 
@@ -441,24 +396,24 @@
 		</profile>
 
 	</profiles>
-<reporting>
+	<reporting>
 
-    <plugins>
- 
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>cobertura-maven-plugin</artifactId>
-            <version>2.5.2</version>
-            <configuration>
-                <check></check>
-                <formats>
-                    <format>html</format>
-                    <format>xml</format>
-                </formats>
-            </configuration>
-        </plugin>
-    
-    </plugins>
-  
-</reporting>
+		<plugins>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<check></check>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</reporting>
 </project>
