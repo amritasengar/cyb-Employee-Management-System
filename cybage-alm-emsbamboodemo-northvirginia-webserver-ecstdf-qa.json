@@ -4,7 +4,6 @@
          "name": "web",
     "image": "543816070942.dkr.ecr.us-east-1.amazonaws.com/cybage-alm-emsbamboodemo-northverginia-ecscluster-qa:RELEASE_VERSION",
     "cpu": 500,
-    "memory": null,
     "portMappings": [
       {
         "containerPort": 8080
