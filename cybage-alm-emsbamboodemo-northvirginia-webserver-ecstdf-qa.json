@@ -1,5 +1,5 @@
 {
-     "family": "usap-ow-task-definition",
+     "family": "cybage-alm-emsbamboodemo-northvirginia-webserver-ecstdf-qa",
      "containerDefinitions": [{
          "name": "web",
     "image": "543816070942.dkr.ecr.us-east-1.amazonaws.com/cybage-alm-emsbamboodemo-northverginia-ecscluster-qa:RELEASE_VERSION",
