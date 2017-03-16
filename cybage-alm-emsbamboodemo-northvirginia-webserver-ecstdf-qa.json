@@ -3,7 +3,7 @@
 	"containerDefinitions": [{
 		"name": "web",
 		"image": "543816070942.dkr.ecr.us-east-1.amazonaws.com/cybage-alm-emsbamboodemo-qa-ecrrepo:latest",
-		"cpu": 500,
+		"cpu": 10,
 		"portMappings": [{
 			"containerPort": 8080
 		}],
@@ -30,6 +30,7 @@
 			"name": "DIALECT",
 			"value": "org.hibernate.dialect.MySQLDialect"
 		}],
-		"essential": true
+		"essential": true,
+		"memory": 400
 	}]
 }
