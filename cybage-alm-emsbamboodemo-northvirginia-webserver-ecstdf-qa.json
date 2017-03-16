@@ -30,7 +30,6 @@
 			"name": "DIALECT",
 			"value": "org.hibernate.dialect.MySQLDialect"
 		}],
-		"essential": true,
-		"memoryReservation": 256
+		"essential": true
 	}]
 }
