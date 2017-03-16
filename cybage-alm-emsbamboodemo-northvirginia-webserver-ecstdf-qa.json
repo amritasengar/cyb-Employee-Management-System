@@ -2,7 +2,7 @@
      "family": "cybage-alm-emsbamboodemo-northvirginia-webserver-ecstdf-qa",
      "containerDefinitions": [{
          "name": "web",
-    "image": "543816070942.dkr.ecr.us-east-1.amazonaws.com/cybage-alm-qa-ems-release:RELEASE_VERSION",
+    "image": "543816070942.dkr.ecr.us-east-1.amazonaws.com/cybage-alm-emsbamboodemo-qa-ecrrepo:latest",
     "cpu": 500,
     "portMappings": [
       {
