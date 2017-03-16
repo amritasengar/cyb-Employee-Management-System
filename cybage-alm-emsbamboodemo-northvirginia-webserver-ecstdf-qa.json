@@ -1,22 +1,36 @@
 {
-     "family": "cybage-alm-emsbamboodemo-northvirginia-webserver-ecstdf-qa",
-     "containerDefinitions": [{
-         "name": "web",
-    "image": "543816070942.dkr.ecr.us-east-1.amazonaws.com/cybage-alm-emsbamboodemo-qa-ecrrepo:latest",
-    "cpu": 500,
-    "portMappings": [
-      {
-        "containerPort": 8080
-      }
-    ],
-    "environment" : [
-        { "name" : "DRIVERCLASSNAME", "value" : "com.mysql.jdbc.Driver" },
-        { "name" : "DATABASEURL", "value" : "jdbc:mysql://cybage-alm-dev-rds.clbdj44v7c4x.us-east-1.rds.amazonaws.com:3306/app" },
-        { "name" : "DBUSERNAME", "value" : "app" },
-        { "name" : "DBPASSWORD", "value" : "app" },
-        { "name" : "DIALECT", "value" : "org.hibernate.dialect.MySQLDialect" }
-    ],
-    "essential": true,
-    "memoryReservation": 256
-     }]
+	"family": "cybage-alm-emsbamboodemo-northvirginia-webserver-ecstdf-qa",
+	"containerDefinitions": [{
+		"name": "web",
+		"image": "543816070942.dkr.ecr.us-east-1.amazonaws.com/cybage-alm-qa-ems-release:RELEASE_VERSION",
+		"cpu": 500,
+		"portMappings": [{
+			"containerPort": 8080
+		}],
+		"logConfiguration": {
+			"logDriver": "awslogs",
+			"options": {
+				"awslogs-group": "awslogs-emsbamboodemo",
+				"awslogs-region": "us-east-1"
+			}
+		},
+		"environment": [{
+			"name": "DRIVERCLASSNAME",
+			"value": "com.mysql.jdbc.Driver"
+		}, {
+			"name": "DATABASEURL",
+			"value": "jdbc:mysql://cybage-alm-dev-rds.clbdj44v7c4x.us-east-1.rds.amazonaws.com:3306/app"
+		}, {
+			"name": "DBUSERNAME",
+			"value": "app"
+		}, {
+			"name": "DBPASSWORD",
+			"value": "app"
+		}, {
+			"name": "DIALECT",
+			"value": "org.hibernate.dialect.MySQLDialect"
+		}],
+		"essential": true,
+		"memoryReservation": 256
+	}]
 }
