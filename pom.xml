@@ -263,9 +263,7 @@
 					</plugin>
 
 					<plugin> <groupId>com.atlassian.maven.plugins</groupId> <artifactId>maven-clover2-plugin</artifactId> 
-						<version>3.1.12</version> <configuration> <encoding>utf-8</encoding> <license><![CDATA[PpOnrjlpFewlfppRpEgUBpPbqOQJCUXjxddDPtIMwGJDGG 
-						mi2KYwlOOX3WDaavVOPbBQRA2Ktgp87Kv<XxIdM4P76DSK QMRrXSqOOqMmOmnNoNrtxoMpPOnooOnRRpvvWUWVTVwsOn 
-						mnmUUnpttrorsmmmmmUUnpttrorsmmmmmUU3vYXdbUUn]]> </license> <targetPercentage>10%</targetPercentage> 
+						<version>3.1.12</version> <configuration> <encoding>utf-8</encoding> <license><![OQrPxGFJsmUxsxtiASdtdclbonXTHXpSotojQssnkBPtKBmi2KoLluvRX1SAJQAQlNylso2KXxvjnGSXCj1JYtg5nNWQrRnRSvrMnrpQRqpoommUTQrrOrpnRPQNNOvvTVVsXWsXmnmpmUUnqvmnvnommmmmUUnqvmnvnommmmmUUZvYXdbUUn]]> </license> <targetPercentage>10%</targetPercentage> 
 						<jdk>1.7</jdk> <generatePdf>true</generatePdf> <generateXml>true</generateXml> 
 						<generateHtml>true</generateHtml> <generateHistorical>true</generateHistorical> 
 						</configuration> <executions> <execution> <id>main</id> <phase>verify</phase> 
