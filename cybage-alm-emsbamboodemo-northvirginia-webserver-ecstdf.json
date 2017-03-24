@@ -31,6 +31,6 @@
 			"value": "org.hibernate.dialect.MySQLDialect"
 		}],
 		"essential": true,
-		"memory": 400
+		"memory": 600
 	}]
 }
