@@ -1,6 +1,8 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Testing develop to release pull request followed by merging, by developer pallavise
+
+This README DEPICTS INFORMATION THAT LIE IN ONLY THE DEVELOP BRANCH OF SOURCE CODE.
 
 ### What is this repository for? ###
 
