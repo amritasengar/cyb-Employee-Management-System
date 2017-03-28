@@ -82,7 +82,7 @@ a:hover {color:#80A24A;}   /* mouse over link */
 <body>
 <div id="header_container">
     <div id="header">
-       Employee Management System
+       Employee Management System- BambooDemo
     </div>
 </div>
 <div class="smart-green" >
