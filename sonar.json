@@ -1,0 +1,7 @@
+{
+
+"sonarHost": "http://172.27.59.251:9000",
+
+"sonarProjectKey": "gameoflife_new"
+
+}
