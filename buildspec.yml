@@ -14,7 +14,7 @@ phases:
       - echo Entered the build phase..
       - echo Build started on `date`
       - mvn install
-  post_build:
+ post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
