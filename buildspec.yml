@@ -8,8 +8,8 @@ phases:
       - apt-get install -y maven
  pre_build:
     commands:
-     - echo Entered the pre_build phase...
-  build:
+    - echo Entered the pre_build phase...
+ build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
