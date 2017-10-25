@@ -17,7 +17,7 @@ ENV CATALINA_HOME /usr/share/tomcat7/
 ENV CATALINA_BASE /var/lib/tomcat7/
 ENV PATH $CATALINA_HOME/bin:$PATH
 
-COPY ./target/*.war /var/lib/tomcat7/webapps/EmployeeApplication.war 
+#COPY ./target/*.war /var/lib/tomcat7/webapps/EmployeeApplication.war 
 EXPOSE 8080
  
 CMD ["catalina.sh", "run"]
