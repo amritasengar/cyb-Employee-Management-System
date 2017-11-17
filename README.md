@@ -1,6 +1,5 @@
 # README #
 
-Added issue id in commit message-pallavi
 
 Created a feature branch and commited changes to the same for testing bamboo build status being depicted in JIRA issue in "Create branch" section
 
