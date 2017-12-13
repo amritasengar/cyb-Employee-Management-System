@@ -4,6 +4,8 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
+      - sudo apt-get install -y openjdk-7-jdk
+      - yum install maven2 -y
       - mvn clean install
       - $(aws ecr get-login --region us-east-1)
   build:
