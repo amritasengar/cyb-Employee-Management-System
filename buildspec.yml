@@ -21,6 +21,6 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 555466333143.dkr.ecr.us-east-1.amazonaws.com/testrepo:latest
-      - printf '[{"name":"hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"hello-world","imageUri":"555466333143.dkr.ecr.us-east-1.amazonaws.com/testrepo:lates"}]' 555466333143.dkr.ecr.us-east-1.amazonaws.com/testrepo:latest > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
