@@ -6,8 +6,8 @@ phases:
       - echo Logging in to Amazon ECR...
       - sudo apt-get update
       - sudo add-apt-repository ppa:webupd8team/java
-    	- sudo apt-get update
-	    - sudo apt-get -y install oracle-java8-installer
+      - sudo apt-get update
+      - sudo apt-get -y install oracle-java8-installer
       - sudo apt-get install -y maven2 
       - mvn clean install
       - $(aws ecr get-login --region us-east-1)
