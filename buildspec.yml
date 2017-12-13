@@ -6,7 +6,8 @@ phases:
       - echo Logging in to Amazon ECR...
       - sudo apt-get install openjdk-8* -y
       - sudo apt-get update
-      - sudo apt-get install -y maven2 
+      - apt-cache search maven
+      - sudo apt-get install -y maven 
       - mvn clean install
       - $(aws ecr get-login --region us-east-1)
   build:
