@@ -4,13 +4,11 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - sudo apt-get install openjdk-8* -y
+      - sudo apt-get install openjdk-7-jdk -y
       - sudo apt-get update
       - apt-cache search maven
       - sudo apt-get install -y maven  
-      - sudo export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ >> ~/.bash_profile
-      - sudo export PATH=$PATH:/usr/lib/jvm/java-7-openjdk-amd64/bin >> ~/.bash_profile
-      - sudo . ~/.bash_profile
+      
       - echo "----------------------------------------------------------------------------------"
       - echo $JAVA_HOME
       - echo $PATH
