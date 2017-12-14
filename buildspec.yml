@@ -8,6 +8,9 @@ phases:
       - sudo apt-get update
       - apt-cache search maven
       - sudo apt-get install -y maven 
+      - echo "----------------------------------------------------------------------------------"
+      - sudo ls /usr/lib/jvm/
+      - echo "----------------------------------------------------------------------------------"
       - mvn clean install
       - $(aws ecr get-login --region us-east-1)
   build:
