@@ -8,8 +8,10 @@ phases:
       - sudo apt-get update
       - apt-cache search maven
       - sudo apt-get install -y maven 
+     
+      - export JAVA_HOME = "/usr/lib/jvm/java-7-openjdk-amd64"
       - echo "----------------------------------------------------------------------------------"
-      - sudo ls /usr/lib/jvm/
+      - echo $JAVA_HOME
       - echo "----------------------------------------------------------------------------------"
       - mvn clean install
       - $(aws ecr get-login --region us-east-1)
