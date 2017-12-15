@@ -18,7 +18,7 @@ phases:
       - echo "----------------------------------------------------------------------------------"
       - sudo mvn clean install
      #- sudo /etc/init.d/docker start --privileged
-      - $(aws ecr get-login --region us-east-1)
+     # - $(aws ecr get-login --region us-east-1)
   build:
     commands:
       - echo Build started on `date`
