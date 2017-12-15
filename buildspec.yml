@@ -17,7 +17,7 @@ phases:
       - echo $PATH
       - echo "----------------------------------------------------------------------------------"
       - sudo mvn clean install
-      - sudo /etc/init.d/docker start
+      - sudo /etc/init.d/docker start --privileged
       - $(aws ecr get-login --region us-east-1)
   build:
     commands:
