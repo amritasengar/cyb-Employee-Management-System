@@ -9,7 +9,7 @@
 	<url>http://maven.apache.org</url>
 	<distributionManagement>
 		<repository>
-		        <id>EMS-snapshot</id>
+		        <id>EMS-release</id>
     		        <url>http://localhost:8081/nexus/content/repositories/EMS-release</url>
   		 </repository>
 	</distributionManagement>
