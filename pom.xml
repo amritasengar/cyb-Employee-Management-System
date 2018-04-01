@@ -9,12 +9,9 @@
 	<url>http://maven.apache.org</url>
 	<distributionManagement>
 		<repository>
-		 <snapshotRepository>
-   		        <id>EMS-snapshot</id>
+		        <id>EMS-snapshot</id>
     		        <url>http://localhost:8081/nexus/content/repositories/EMS-snapshot</url>
-  		 </snapshotRepository>
-		</repository>
-
+  		 </repository>
 	</distributionManagement>
 	<pluginRepositories>
 		<pluginRepository>
