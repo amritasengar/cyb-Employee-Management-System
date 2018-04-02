@@ -13,6 +13,12 @@
     		        <url>http://localhost:8081/nexus/content/repositories/EMS-release</url>
   		 </repository>
 	</distributionManagement>-->
+	<distributionManagement>
+  <snapshotRepository>
+    <id>EMS-snapshot</id>
+    <url>http://localhost:8081/nexus/content/repositories/EMS-snapshot</url>
+  </snapshotRepository>
+</distributionManagement>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>excilys</id>
