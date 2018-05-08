@@ -75,7 +75,7 @@ body { margin:0; padding:0; }
     font: normal 14px/14px Arial, Helvetica, sans-serif;
 }
 .smart-green button {
-    background-color: #9DC45F;
+    background-color: #5f60c4;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-border-radius: 5px;
