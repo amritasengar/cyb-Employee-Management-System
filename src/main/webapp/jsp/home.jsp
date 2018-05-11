@@ -14,7 +14,7 @@ body { margin:0; padding:0; }
  
 /* Make Header Sticky */
 #header_container { background:#8AC007;  height:50px; left:0; position:fixed; width:100%; top:0; }
-#header{ line-height:40px; margin:0 auto; width:940px; text-align:center;font-weight: bolder;font-size: 30px;color:red;}
+#header{ line-height:40px; margin:0 auto; width:940px; text-align:center;font-weight: bolder;font-size: 30px;color:yellow;}
  
  .smart-green {
     width: 400px;
