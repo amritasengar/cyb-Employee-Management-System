@@ -1,0 +1,15 @@
+{
+
+<<<<<<< HEAD
+"sonarHost": "http://localhost:9000",
+
+"sonarProjectKey": "gameoflife_new"
+
+}
+=======
+"sonarHost": "http://172.27.59.251:9000",
+
+"sonarProjectKey": "gameoflife_new"
+
+}
+>>>>>>> 1fd9678151b7710cddb05e2b59adf0855d4f06bd

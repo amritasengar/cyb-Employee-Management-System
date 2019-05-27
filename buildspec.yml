@@ -1,0 +1,35 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+     # - lsb_release -a
+     #- sudo apt-get update
+     # - sudo apt-get install openjdk-7-jdk -y
+     # - apt-cache search maven
+     # - sudo apt-get install -y maven  
+     # - export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ >> ~/.bash_profile
+     # - export PATH=$PATH:/usr/lib/jvm/java-7-openjdk-amd64/bin >> ~/.bash_profile
+     # - . ~/.bash_profile
+     # - echo "----------------------------------------------------------------------------------"
+      - echo $JAVA_HOME
+      - echo $PATH
+      - echo "----------------------------------------------------------------------------------"
+      - sudo mvn clean install
+     #- sudo /etc/init.d/docker start --privileged
+     # - $(aws ecr get-login --region us-east-1)
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...          
+      - docker build -t testrepo .
+      - docker tag testrepo:latest 555466333143.dkr.ecr.us-east-1.amazonaws.com/testrepo:latest
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push 555466333143.dkr.ecr.us-east-1.amazonaws.com/testrepo:latest
+      - printf '[{"name":"hello-world","imageUri":"555466333143.dkr.ecr.us-east-1.amazonaws.com/testrepo:latest"}]' 555466333143.dkr.ecr.us-east-1.amazonaws.com/testrepo:latest > imagedefinitions.json
+artifacts:
+    files: imagedefinitions.json
