@@ -1,0 +1,28 @@
+package com.cybage.selenium;
+
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
+//import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+
+public class Selenium_1 {
+
+	WebDriver driver;
+
+	@Test
+	public void checkTitle() throws MalformedURLException {
+
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,"lib/phantomjs");
+		WebDriver driver = new PhantomJSDriver(caps);
+
+		driver.get("http://104.155.166.155");
+
+		driver.quit();
+
+	}
+}
