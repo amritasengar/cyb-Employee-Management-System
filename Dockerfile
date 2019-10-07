@@ -5,7 +5,7 @@ FROM ubuntu:14.04
 LABEL Description="This image is used for github->circleci->dockerhub->tutum->aws" Version="1.0"
 
 # File Author / Maintainer
-MAINTAINER pushpendra
+MAINTAINER amrita
 
 RUN apt-get update
 
