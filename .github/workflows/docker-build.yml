@@ -1,14 +1,16 @@
-name: Docker Build & Publish to GitHub Container Registry
+name: ci
+
 on:
   push:
     branches:
-      # main will be the latest released version
-      - 'main'
-      # anything under a build/ folder will be used as testing the build processes.
-      - 'build/*'
+      - 'master'
     tags:
       - 'v*'
- jobs:
+  pull_request:
+    branches:
+      - 'master'
+
+jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
@@ -35,5 +37,4 @@ on:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}  
-      
+          labels: ${{ steps.meta.outputs.labels }}
