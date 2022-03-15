@@ -1,4 +1,4 @@
-name: ci
+name: building and pushing the docker file
 
 on:
   push:
@@ -17,6 +17,11 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v2
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: v0.7.0
       -
         name: Docker meta
         id: meta
